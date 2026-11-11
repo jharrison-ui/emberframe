@@ -28,6 +28,8 @@
   <img src="docs/screenshots/workspace.png" alt="Emberframe workspace editing a landing page design, with the tools on the left, Properties below and the panel dock on the right">
 </p>
 
+> Emberframe is an independent project, not affiliated with or endorsed by Adobe. "Adobe" and "Fireworks" are trademarks of Adobe, used here only to describe what this project resembles.
+
 > **Created by [Med Amine Belbachir](https://medamineweb.com/)**, who started this project to bring the Fireworks workflow back as free, native software.
 
 ## Why Emberframe
@@ -65,7 +67,11 @@ It is deliberately a look-alike: the same docked layout, tool groups, panels and
 
 Download `emberframe.exe` for Windows from the [latest release](https://github.com/gregstein/emberframe/releases/latest) and run it.
 
-To build from source, you need Rust 1.91 or later, the Visual Studio C++ tools and the Windows SDK.
+> **Note:** If pre-built binaries are not yet published for your release, please build from source using the instructions below.
+
+### Build from source
+
+To build from source, you need Rust 1.91 or later, the Visual Studio C++ build tools, and the Windows SDK.
 
 ```bash
 git clone https://github.com/gregstein/emberframe.git
@@ -73,7 +79,9 @@ cd emberframe
 cargo run --release
 ```
 
-Then open [`examples/solstice-landing.ember`](examples/solstice-landing.ember) with Ctrl+O to explore the design in the screenshots. The [user guide](docs/guide.md) explains the tools and panels.
+Then open [`examples/solstice-landing.ember`](examples/solstice-landing.ember) with <kbd>Ctrl</kbd>+<kbd>O</kbd> to explore the design shown in the screenshots. The [user guide](docs/guide.md) explains the available tools and panels.
+
+To execute tests:
 
 ```bash
 cargo test
@@ -81,17 +89,17 @@ cargo test
 
 ## Not in this version
 
-Emberframe is at version 0.1, so some things are still missing:
+Emberframe is at version 0.1, so some features are not yet implemented:
 
-- Free rotation, Skew and Distort. Rotate turns objects by 90 degrees and skips text and symbols.
-- Bezier curves. Pen paths use straight segments.
+- Free rotation, Skew, and Distort. Rotate turns objects by 90 degrees and skips text and symbols.
+- Bezier curves. Pen paths currently use straight segments.
 - Masks, live effects in Styles, and moving selected pixels in place.
-- Dragging Auto Shapes and library items onto the canvas. Click them to insert.
-- Printing, layer blend modes, and JPEG Selective quality and Smoothing, which appear greyed out.
-- Layers inside Fireworks PNG files. Only the flat image is read.
-- macOS and Linux builds.
+- Dragging Auto Shapes and library items onto the canvas (click them to insert).
+- Printing, layer blend modes, and JPEG Selective quality and Smoothing (currently greyed out).
+- Layers inside Fireworks PNG files (only the flattened image is read).
+- macOS and Linux native builds.
 
-Issues and pull requests are welcome, especially for the items above.
+Issues and pull requests are welcome, especially for the items listed above.
 
 ## Creator
 
@@ -101,10 +109,10 @@ Issues and pull requests are welcome, especially for the items above.
 - Project page: [medamineweb.com/en/emberframe](https://medamineweb.com/en/emberframe/)
 - GitHub: [@gregstein](https://github.com/gregstein)
 
-If Emberframe is useful or brings back good memories, a star helps other Fireworks fans find it.
+If Emberframe is useful or brings back good memories, a star helps other Fireworks fans discover it.
 
 ## Legal
 
-Emberframe is an independent project. It is not affiliated with, endorsed by or sponsored by Adobe Inc. Adobe and Fireworks are either registered trademarks or trademarks of Adobe in the United States and/or other countries, and are used here only to describe what this project resembles.
+Emberframe is an independent project. It is not affiliated with, endorsed by, or sponsored by Adobe Inc. Adobe and Fireworks are either registered trademarks or trademarks of Adobe in the United States and/or other countries, and are used here only to describe what this project resembles.
 
 Released under the [MIT License](LICENSE).
